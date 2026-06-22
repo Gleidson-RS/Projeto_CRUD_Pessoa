@@ -3,7 +3,7 @@ const calcDesconto = (objPessoa) => {
 let resultCalc = ''
 
 if((objPessoa.idade <= 18) || (objPessoa.renda <= 1700)){
-  resultCalc = 'Isento de descontos'
+  resultCalc = '0'
 }else if(objPessoa.renda <= 5000){
     resultCalc = objPessoa.renda * 0.05
 }else if(objPessoa.renda <= 8000){
