@@ -22,3 +22,8 @@ formPessoa.addEventListener('submit', (evt) => {
     }
 
 })
+
+//CRIANDO A FUNÇÃO ADICIONAR PESSOA 
+const addPessoa = (objPessoa) => {
+    pessoas.push(objPessoa)
+}
