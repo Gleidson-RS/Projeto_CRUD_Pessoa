@@ -10,7 +10,14 @@ h3{
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 5px;
-    color: rgb(0, 0, 0);
+    color: rgb(0, 20, 255);
+}
+
+h4{
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: rgb(255, 0, 0);
 }
 
 #div-form-pessoa, #div-lista-pessoas{
@@ -44,7 +51,7 @@ button{
 #div-lista-pessoas{
     width: 100%;
     min-height: 450px;
-    color: rgb(23, 240, 4);
+    color: rgb(0, 20, 255);
 }
 
 
