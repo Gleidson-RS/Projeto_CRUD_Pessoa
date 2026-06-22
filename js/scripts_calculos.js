@@ -16,3 +16,5 @@ if((objPessoa.idade <= 18) || (objPessoa.renda <= 1700)){
 
   return resultCalc
 }
+
+export{calcDesconto}
