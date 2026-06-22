@@ -46,3 +46,13 @@ button{
     min-height: 450px;
     color: rgb(0, 252, 76);
 }
+
+
+#div-imagen{
+ background-image: url("https://i.wahup.com/media/tmp_meme_images/21038878-8f91-453e-88ec-5ecc5aa1cac4.png");
+  background-size: cover;
+  background-position: 200%;
+  background-repeat: no-repeat;
+  width: 537px;
+  height: 750px;
+}
