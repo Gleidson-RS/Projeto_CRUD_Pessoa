@@ -2,8 +2,10 @@
 const formPessoa = document.querySelector('#form-pessoa')
 const divLista = document.querySelector('#div-lista-pessoas')
 
+
 //CRIANDO O ARRAY PESSOAS
 const pessoas = []
+
 
 //CAPTURAR O EVENTO submit DO FORMULÁRIO
 formPessoa.addEventListener('submit', (evt) => {
@@ -20,6 +22,7 @@ formPessoa.addEventListener('submit', (evt) => {
     addPessoa(pessoa)
 })
 
+
 //FUNÇÃO ADICIONAR PESSOA
 const addPessoa = (objPessoa) => {
     pessoas.push(objPessoa)
@@ -28,6 +31,7 @@ const addPessoa = (objPessoa) => {
 
     formPessoa.reset()
 }
+
 
 //FUNÇÃO LISTAR PESSOAS
 const listPessoas = () => {
