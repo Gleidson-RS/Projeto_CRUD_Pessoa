@@ -3,39 +3,40 @@ const formPessoa = document.querySelector('#form-pessoa')
 const divLista = document.querySelector('#div-lista-pessoas')
 
 //CRIANDO O ARRAY PESSOAS
-const pessoa = []
+const pessoas = []
 
-
-//CAPITURAR O EVENTO submit DO FORMULARIO
+//CAPTURAR O EVENTO submit DO FORMULÁRIO
 formPessoa.addEventListener('submit', (evt) => {
-    //INTERROMPER O EFEITO PADRÃO DE SUBMETER OS DADOS DO FORMULARIO
     evt.preventDefault()
 
-    //CRIAR UM OBJETO FORMULARIO
     const dadosFormPessoa = new FormData(formPessoa)
 
-    //CRIAR UM OBJETO LITERAL
     const pessoa = {
         nome: dadosFormPessoa.get('nome'),
         idade: dadosFormPessoa.get('idade'),
         renda: dadosFormPessoa.get('renda')
     }
 
-    //CHAMANDO A FUNÇÃO addPessoa E PASSANDO O OBJETO LITERAL pessoa
     addPessoa(pessoa)
-
 })
 
-//CRIANDO A FUNÇÃO ADICIONAR PESSOA 
+//FUNÇÃO ADICIONAR PESSOA
 const addPessoa = (objPessoa) => {
-    //ADICIONANDO O OBJETO LITERAL NO ARRAY PESSOAS
     pessoas.push(objPessoa)
+
+    listPessoas()
+
+    formPessoa.reset()
 }
 
-//FUNÇÃO PARA LISTAR PESSOAS DO ARRAY
+//FUNÇÃO LISTAR PESSOAS
 const listPessoas = () => {
+    // Limpa a lista antes de recriar
+    divLista.innerHTML = ''
+
     pessoas.forEach((elem, i) => {
-        divLista.innerHTML += `${i} - ${elem.nome} - ${elem.idade} - ${elem.renda} <br>`
+        divLista.innerHTML += ` ${i + 1} - ${elem.nome} - ${elem.idade} anos - R$ ${elem.renda} <hr> <br>`
+
     })
 }
 
